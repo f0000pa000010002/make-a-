@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Secure App</title>
+    <title>Dashboard - Ingenious Secure Forge Gate</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,105 +11,109 @@
 </head>
 <body>
     <nav class="navbar">
-        <div class="nav-brand">
-            <h1>Secure<span>Gate</span></h1>
-        </div>
-        <div class="nav-links">
-            <span class="user-greeting">Welcome, <span id="userName">User</span></span>
-            <button id="logoutBtn" class="btn-outline">Logout</button>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="https://image.pollinations.ai/prompt/secure%20shield%20logo%20blue%20white" alt="Logo">
+                <span>Ingenious Secure Forge Gate</span>
+            </div>
+            <div class="user-profile">
+                <div class="user-info">
+                    <span id="userEmail">user@example.com</span>
+                    <span id="userName">User</span>
+                </div>
+                <button id="logoutBtn" class="btn-logout">Logout</button>
+            </div>
         </div>
     </nav>
     
-    <main class="main-content">
-        <div class="dashboard">
+    <main class="dashboard">
+        <div class="container">
             <div class="dashboard-header">
-                <h2>Overview</h2>
-                <div class="date-display">
-                    <span id="currentDate"></span>
-                </div>
+                <h2>Dashboard</h2>
+                <p>Welcome back! Here's your account overview</p>
             </div>
             
             <div class="stats-grid">
                 <div class="stat-card">
-                    <div class="stat-icon" style="background: #4F46E5;">●</div>
-                    <div class="stat-info">
-                        <h3>Active Sessions</h3>
-                        <p class="stat-value" id="activeSessions">3</p>
+                    <div class="stat-icon" style="background: #4f46e5;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20Z" fill="white"/>
+                            <path d="M12 6C12 6 10 8 10 10C10 12 12 14 12 14C12 14 14 12 14 10C14 8 12 6 12 6Z" fill="white"/>
+                        </svg>
                     </div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon" style="background: #DB0A76;">●</div>
-                    <div class="stat-info">
-                        <h3>Security Score</h3>
-                        <p class="stat-value" id="securityScore">92</p>
-                    </div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon" style="background: #10B981;">●</div>
-                    <div class="stat-info">
-                        <h3>API Calls</h3>
-                        <p class="stat-value" id="apiCalls">1,248</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="content-grid">
-                <div class="main-panel">
-                    <div class="panel-header">
-                        <h3>Recent Activity</h3>
-                        <button class="btn-small">View All</button>
-                    </div>
-                    <div class="activity-list">
-                        <div class="activity-item">
-                            <div class="activity-icon" style="background: #F59E0B;">S</div>
-                            <div class="activity-details">
-                                <span class="activity-title">System Backup</span>
-                                <span class="activity-time">2 hours ago</span>
-                            </div>
-                        </div>
-                        <div class="activity-item">
-                            <div class="activity-icon" style="background: #3B82F6;">L</div>
-                            <div class="activity-details">
-                                <span class="activity-title">Login from New Device</span>
-                                <span class="activity-time">5 hours ago</span>
-                            </div>
-                        </div>
-                        <div class="activity-item">
-                            <div class="activity-icon" style="background: #EF4444;">W</div>
-                            <div class="activity-details">
-                                <span class="activity-title">Security Alert Cleared</span>
-                                <span class="activity-time">1 day ago</span>
-                            </div>
-                        </div>
+                    <div class="stat-content">
+                        <h3>Account Status</h3>
+                        <p id="accountStatus">Active</p>
                     </div>
                 </div>
                 
-                <div class="side-panel">
-                    <div class="panel-header">
-                        <h3>Quick Access</h3>
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: #059669;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13 2L3 14H12L11 22L21 10L13 2Z" fill="white"/>
+                        </svg>
                     </div>
-                    <div class="quick-links">
-                        <a href="#" class="quick-link">
-                            <div class="link-icon">📁</div>
-                            <span>Documents</span>
-                        </a>
-                        <a href="#" class="quick-link">
-                            <div class="link-icon">⚙️</div>
-                            <span>Settings</span>
-                        </a>
-                        <a href="#" class="quick-link">
-                            <div class="link-icon">👥</div>
-                            <span>Team</span>
-                        </a>
-                        <a href="#" class="quick-link">
-                            <div class="link-icon">📊</div>
-                            <span>Analytics</span>
-                        </a>
+                    <div class="stat-content">
+                        <h3>API Calls</h3>
+                        <p id="apiCalls">1,248</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: #d97706;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 22C12 22 3 18 3 12C3 6 8 4 12 4C16 4 21 6 21 12C21 18 12 22 12 22ZM12 8C10.9 8 10 8.9 10 10C10 11.1 10.9 12 12 12C13.1 12 14 11.1 14 10C14 8.9 13.1 8 12 8Z" fill="white"/>
+                        </svg>
+                    </div>
+                    <div class="stat-content">
+                        <h3>Security Level</h3>
+                        <p>High</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="recent-activity">
+                <h3>Recent Activity</h3>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <div class="activity-icon" style="background: #f59e0b;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13 2L3 14H12L11 22L21 10L13 2Z" fill="white"/>
+                            </svg>
+                        </div>
+                        <div class="activity-details">
+                            <span class="activity-title">API Request Successful</span>
+                            <span class="activity-time">2 minutes ago</span>
+                        </div>
+                    </div>
+                    
+                    <div class="activity-item">
+                        <div class="activity-icon" style="background: #10b981;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20Z" fill="white"/>
+                                <path d="M12 6C12 6 10 8 10 10C10 12 12 14 12 14C12 14 14 12 14 10C14 8 12 6 12 6Z" fill="white"/>
+                            </svg>
+                        </div>
+                        <div class="activity-details">
+                            <span class="activity-title">Account Verified</span>
+                            <span class="activity-time">1 hour ago</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </main>
+    
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Ingenious Secure Forge Gate. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Security</a>
+            </div>
+        </div>
+    </footer>
     
     <script src="script.js"></script>
 </body>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Secure App</title>
+    <title>Login - Ingenious Secure Forge Gate</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,25 +11,45 @@
 </head>
 <body>
     <div class="container">
-        <div class="auth-card">
+        <div class="card">
             <div class="logo">
-                <h1>Secure<span>Gate</span></h1>
+                <img src="https://image.pollinations.ai/prompt/secure%20shield%20logo%20blue%20white" alt="Logo">
             </div>
-            <form id="loginForm">
+            <h1>Welcome Back</h1>
+            <p class="subtitle">Sign in to access your account</p>
+            
+            <form id="loginForm" class="login-form">
                 <div class="form-group">
                     <label for="email">Email Address</label>
                     <input type="email" id="email" name="email" required placeholder="user@example.com">
                 </div>
+                
                 <div class="form-group">
                     <label for="password">Password</label>
                     <input type="password" id="password" name="password" required placeholder="••••••••">
                 </div>
+                
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="remember" name="remember">
+                        <span class="checkmark"></span>
+                        Remember me
+                    </label>
+                </div>
+                
                 <button type="submit" class="btn-primary">Sign In</button>
             </form>
-            <div class="auth-footer">
-                <p>Demo Credentials: <span class="demo-text">demo@secure.com / demo123</span></p>
+            
+            <div id="error-message" class="error-message" style="display: none;"></div>
+            
+            <div class="footer-links">
+                <a href="#">Forgot Password?</a>
+                <span class="separator">|</span>
+                <a href="#">Create Account</a>
             </div>
         </div>
+        
+        <div class="background-shape"></div>
     </div>
     
     <script src="script.js"></script>
